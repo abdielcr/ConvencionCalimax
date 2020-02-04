@@ -48,18 +48,29 @@ class _SignInScreen extends State<SignInScreen> {
   Widget signInGoogleUI() {
     return Scaffold(
       body: Stack(
+
+        //   <--- image he
         alignment: Alignment.center,
         children: <Widget>[
+
           GradientBack(height: null),
           Column(
+
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Flexible(
+              Image.asset('assets/img/caliexia.png',
+                height: 200,
+                width: 300,
+                fit: BoxFit.fitWidth,),
+
+              Center(
+
                 child: Container(
-                  width: screenWidht,
-                  child: Text("Welcome \n This is your Travel App",
+
+
+                  child: Text("",
                     style: TextStyle(
-                        fontSize: 37.0,
+                        fontSize: 35.0,
                         fontFamily: "Lato",
                         color: Colors.white,
                         fontWeight: FontWeight.bold
@@ -69,8 +80,7 @@ class _SignInScreen extends State<SignInScreen> {
                   ),
                 ),
               ),
-
-              ButtonGreen(text: "Login with Gmail",
+              ButtonGreen(text: "Inica con Gmail",
                 onPressed: () {
                   userBloc.signOut();
                   userBloc.signIn().then((FirebaseUser user) {
@@ -85,12 +95,58 @@ class _SignInScreen extends State<SignInScreen> {
                 },
                 width: 300.0,
                 height: 50.0,
+
+              ),
+              ButtonBlue(text: "Inicia con Facebook",
+                onPressed: () {
+                  userBloc.signOut();
+                  userBloc.signIn().then((FirebaseUser user) {
+                    userBloc.updateUserData(User(
+                        uid: user.uid,
+                        name: user.displayName,
+                        email: user.email,
+                        photoURL: user.photoUrl
+                    ));
+                  });
+
+                },
+
+                width: 300.0,
+                height: 50.0,
+
+              ),
+
+              Image.asset(
+
+                'assets/img/byexcel1.png',
+                height: 100,
+                width: 200,
+                fit: BoxFit.fitWidth,
+              ),
+              Image.asset(
+
+                'assets/img/byexcel2.png',
+                height: 100,
+                width: 200,
+                fit: BoxFit.fitWidth,
+              ),
+
+              Image.asset(
+
+                'assets/img/byexcel.png',
+                height: 100,
+                width: 200,
+                fit: BoxFit.fitWidth,
               )
 
             ],
-          )
+
+          ),
+
         ],
+
       ),
+
     );
   }
 

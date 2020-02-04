@@ -18,15 +18,15 @@ class GradientBack extends StatelessWidget {
     if(height == null){
       height = screenHeight;
     }
-
+//Retorna el tamaño del contenedor en la pantalla general
     return Container(
       width: screenWidht,
       height: height,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [
-                Color(0xFF4268D3),
-                Color(0xFF584CD1)
+                Color(0xFFE30101),
+                Color(0xFFF1B1B2)
               ],
               begin: FractionalOffset(0.2, 0.0),
               end: FractionalOffset(1.0, 0.6),

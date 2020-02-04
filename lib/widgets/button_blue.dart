@@ -33,8 +33,8 @@ class _ButtonBlue extends State<ButtonBlue>{
             borderRadius: BorderRadius.circular(10.0),
             gradient: LinearGradient(
                 colors: [
-                  Color(0xFF000000),//arriba
-                  Color(0xFF1cbb78)//bajo
+                  Color(0xFF377877),//arriba
+                  Color(0xFF262D3A)//bajo
                 ],
                 begin: FractionalOffset(0.2, 0.0),
                 end: FractionalOffset(1.0, 0.6),
