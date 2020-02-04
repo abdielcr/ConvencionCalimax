@@ -6,6 +6,8 @@ import 'platzi_trips_cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:app_calimax_convencion/User/bloc/bloc_user.dart';
 
+import 'package:app_calimax_convencion/User/ui/screens/sign_in_screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,11 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        child: MaterialApp(//A que widget hijo se lo quieres exponer
+        child: MaterialApp(
           title: 'Flutter Demo',
-          home: PlatziTripsCupertino(),
+          //home: PlatziTripsCupertino(),
+          home: SignInScreen(),
         ),
-        bloc: UserBloc());//A que bloc se lo quieres esponer
+        bloc: UserBloc());
   }
 }
 

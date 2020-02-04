@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:app_calimax_convencion/widgets/gradient_back.dart';
+import 'package:app_calimax_convencion/widgets/button_green.dart';
+import 'package:app_calimax_convencion/User/bloc/bloc_user.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:app_calimax_convencion/platzi_trips_cupertino.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -12,10 +17,28 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreen extends State<SignInScreen> {
 
+  UserBloc userBloc;
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return signInGoogleUI();
+    userBloc = BlocProvider.of(context);
+    return _handleCurrentSession();
+  }
+
+  Widget _handleCurrentSession(){
+    return StreamBuilder(
+      stream: userBloc.authStatus,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        //snapshot- data - Object User
+        if(!snapshot.hasData || snapshot.hasError) {
+          return signInGoogleUI();
+        } else {
+          return PlatziTripsCupertino();
+        }
+      },
+    );
+
   }
 
   Widget signInGoogleUI() {
@@ -25,6 +48,7 @@ class _SignInScreen extends State<SignInScreen> {
         children: <Widget>[
           GradientBack("", null),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("Welcome \n This is your Travel App",
                 style: TextStyle(
@@ -35,6 +59,14 @@ class _SignInScreen extends State<SignInScreen> {
 
 
                 ),
+              ),
+              ButtonGreen(text: "Login with Gmail",
+                onPressed: () {
+                  userBloc.signIn().then((FirebaseUser user) => print("El usuario es ${user.displayName}"));
+
+                },
+                width: 300.0,
+                height: 50.0,
               )
 
             ],
