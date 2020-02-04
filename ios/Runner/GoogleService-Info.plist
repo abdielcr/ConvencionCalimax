@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>72476774523-gtbm86qkfp7giu9shc2tacf17mjifhl2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.72476774523-gtbm86qkfp7giu9shc2tacf17mjifhl2cle</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCX-buuUqeCChORh96L4QN3IeCnxZ1yyCk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>72476774523</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>excel.mx.appCalimaxConvencion</string>
+	<key>PROJECT_ID</key>
+	<string>convencioncalimax-6a511</string>
+	<key>STORAGE_BUCKET</key>
+	<string>convencioncalimax-6a511.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:72476774523:ios:e0266bc6fb63b5750e92de</string>
+	<key>DATABASE_URL</key>
+	<string>https://convencioncalimax-6a511.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "72476774523",
+    "firebase_url": "https://convencioncalimax-6a511.firebaseio.com",
+    "project_id": "convencioncalimax-6a511",
+    "storage_bucket": "convencioncalimax-6a511.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72476774523:android:4110a51d07e8fb550e92de",
+        "android_client_info": {
+          "package_name": "excel.mx.app_calimax_convencion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72476774523-mbl8o9uftl1qqcbhs0i8dtt1ocslbrub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "excel.mx.app_calimax_convencion",
+            "certificate_hash": "6885a30c56ebdb57c871366efbaa93655a59641f"
+          }
+        },
+        {
+          "client_id": "72476774523-h026ktpkr2bjkvt40cfbimukkqt2b8uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdDOw8F6_Y3S9XV3YETZaHxzED2yYZi6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72476774523-h026ktpkr2bjkvt40cfbimukkqt2b8uu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "72476774523-gtbm86qkfp7giu9shc2tacf17mjifhl2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "excel.mx.appCalimaxConvencion"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
