@@ -6,7 +6,7 @@ class ButtonGreen extends StatefulWidget {
   double width = 0.0;
   double height = 0.0;
   final VoidCallback onPressed;
-//Metodo constructor para hacer generico el boton y pasar los parametros por medio de el
+
   ButtonGreen({Key key, @required this.text, @required this.onPressed, this.height, this.width});
 
   @override
@@ -33,9 +33,8 @@ class _ButtonGreen extends State<ButtonGreen>{
             borderRadius: BorderRadius.circular(10.0),
             gradient: LinearGradient(
                 colors: [
-                  //Color(0xFF065857),
-                  Color(0xFF377877),//arriba
-                  Color(0xFF262D3A)//bajo
+                  Color(0xFF2c393c),//arriba
+                  Color(0xFF2c393c)//bajo
                 ],
                 begin: FractionalOffset(0.2, 0.0),
                 end: FractionalOffset(1.0, 0.6),

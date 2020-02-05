@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:app_calimax_convencion/Place/model/place.dart';
 import 'package:app_calimax_convencion/User/ui/widgets/profile_place_info.dart';
@@ -20,10 +21,10 @@ class ProfilePlace extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: NetworkImage(place.urlImage)
+              image: CachedNetworkImageProvider(place.urlImage)
           ),
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
-          color: Colors.red,
+          color: Colors.blueGrey,
           boxShadow: <BoxShadow>[
             BoxShadow(
                 color: Colors.black38,

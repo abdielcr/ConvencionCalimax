@@ -12,8 +12,8 @@ class ProfileBackground extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [
-                Color(0xFF4268D3),
-                Color(0xFF584CD1)
+                Color(0xFF023470),
+                Color(0xFF4D99F5)
               ],
               begin: FractionalOffset(0.2, 0.0),
               end: FractionalOffset(1.0, 0.6),

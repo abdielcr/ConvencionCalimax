@@ -28,13 +28,14 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
           content: Text("Agregaste a tus Favoritos"),
         )
     );
+
   }*/
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return FloatingActionButton(
-      backgroundColor: Color(0xFF11DA53),
+      backgroundColor: Color(0xFFFB0109),
       mini: true,
       tooltip: "Fav",
       onPressed: widget.onPressed,

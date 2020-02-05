@@ -16,18 +16,18 @@ class TextInputLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(right: 20.0, left: 20.0),
-      child: TextField(
-        controller: controller,
+        padding: EdgeInsets.only(right: 20.0, left: 20.0),
+        child: TextField(
+          controller: controller,
 
-        style: TextStyle(
+          style: TextStyle(
             fontSize: 15.0,
             fontFamily: "Lato",
             color: Colors.blueGrey,
             fontWeight: FontWeight.bold
-        ),
+          ),
 
-        decoration: InputDecoration(
+          decoration: InputDecoration(
             hintText: hintText,
             suffixIcon:  Icon(iconData),
             fillColor: Color(0xFFFFFFFF),
@@ -44,18 +44,18 @@ class TextInputLocation extends StatelessWidget {
 
 
 
+          ),
         ),
-      ),
 
-      decoration: BoxDecoration(
+        decoration: BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Colors.black12,
-                blurRadius: 15.0,
-                offset: Offset(0.0, 7.0)
+              color: Colors.black12,
+              blurRadius: 15.0,
+              offset: Offset(0.0, 7.0)
             )
           ]
-      ),
+        ),
 
 
     );

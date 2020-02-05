@@ -3,11 +3,10 @@ import 'package:app_calimax_convencion/User/repository/firebase_auth_api.dart';
 
 class AuthRepository {
 
-  final _firebaseAuthAPI = FirebaseAuthAPI();//Creamos el oBjeto
+  final _firebaseAuthAPI = FirebaseAuthAPI();
 
-  //Cachamos el usuario
   Future<FirebaseUser> signInFirebase() => _firebaseAuthAPI.signIn();
 
-  //Cerramos la session
   signOut() => _firebaseAuthAPI.signOut();
+
 }

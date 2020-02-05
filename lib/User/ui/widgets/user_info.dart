@@ -5,7 +5,7 @@ class UserInfo extends StatelessWidget {
 
   User user;
 
-
+  
 
   UserInfo(@required this.user);
 
@@ -28,7 +28,7 @@ class UserInfo extends StatelessWidget {
           image: DecorationImage(
               fit: BoxFit.cover,
               //image: AssetImage(user.photoURL)
-              image: NetworkImage(user.photoURL)
+            image: NetworkImage(user.photoURL)
           )
       ),
     );

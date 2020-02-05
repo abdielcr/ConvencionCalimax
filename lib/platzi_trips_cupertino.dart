@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
@@ -34,7 +33,12 @@ class PlatziTripsCupertino extends StatelessWidget {
           switch (index) {
             case 0:
               return CupertinoTabView(
-                builder: (BuildContext context) => HomeTrips(),
+                builder: (BuildContext context) {
+                  return BlocProvider<UserBloc>(
+                    bloc: UserBloc(),
+                    child: HomeTrips(),
+                  );
+                },
               );
               break;
             case 1:

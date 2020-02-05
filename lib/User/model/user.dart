@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_calimax_convencion/Place/model/place.dart';
 
-
 class User {
   final String uid;
   final String name;

@@ -23,16 +23,25 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  generic_bloc_provider: ^1.0.8
+  generic_bloc_provider: ^1.0.9
   firebase_auth:
   google_sign_in:
-  firebase_storage: ^2.1.0
-  cloud_firestore: ^0.9.13
+  firebase_storage: ^3.1.0
+  cloud_firestore: 0.12.9+5
+  image_picker: ^0.6.2+3
+  cached_network_image: ^2.0.0-rc
+  flutter_map: ^0.8.0
+  flutter_signin_button: ^1.0.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.7.3"
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/img/exia.png"
 
 
 # For information on the generic Dart part of this file, see the
@@ -88,6 +97,11 @@ flutter:
     - assets/img/river.jpeg
     - assets/img/caliexia.png
     - assets/img/byexcel.png
+    - assets/img/calimax.jpg
+    - assets/img/calimax2.jpg
+    - assets/img/calimax81.jpg
+    - assets/img/calimax33.jpg
+    - assets/img/loginLogo.png
 
   fonts:
     - family: Lato

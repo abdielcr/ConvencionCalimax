@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthAPI {
@@ -8,15 +7,19 @@ class FirebaseAuthAPI {
   final GoogleSignIn googleSignIn = GoogleSignIn();
 
   Future<FirebaseUser> signIn() async {
-    GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
-    GoogleSignInAuthentication gSA = await googleSignInAccount.authentication;
+    final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+    final GoogleSignInAuthentication googleAuth = await googleSignInAccount.authentication;
 
-    FirebaseUser user = await _auth.signInWithCredential(
-        GoogleAuthProvider.getCredential(idToken: gSA.idToken, accessToken: gSA.accessToken));
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
 
+    final FirebaseUser user = (await _auth.signInWithCredential(credential)).user;
+    print("signed in " + user.displayName);
     return user;
-
   }
+
 
   signOut() async {
     await _auth.signOut().then((onValue) => print("Sesión cerrada"));

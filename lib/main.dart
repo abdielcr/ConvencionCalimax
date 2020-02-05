@@ -5,7 +5,6 @@ import 'platzi_trips.dart';
 import 'platzi_trips_cupertino.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:app_calimax_convencion/User/bloc/bloc_user.dart';
-
 import 'package:app_calimax_convencion/User/ui/screens/sign_in_screen.dart';
 
 void main() => runApp(MyApp());

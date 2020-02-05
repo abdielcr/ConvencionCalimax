@@ -8,9 +8,10 @@ class ReviewList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Review("assets/img/people.jpg", "Varuna Yasas", "1 review · 5 photos", "There is an amazing place in Sri Lanka"),
-        Review("assets/img/ann.jpg", "Anahí Salgado", "2 review · 5 photos", "There is an amazing place in Sri Lanka"),
-        Review("assets/img/girl.jpg", "Gissele Thomas", "2 review · 2 photos", "There is an amazing place in Sri Lanka"),
+        Review("assets/img/calimax.jpg", "Noticias Calimax 1", " ", "calimax, empresa binacional del año"'\n'"Baja California"),
+        Review("assets/img/calimax2.jpg", "Noticia Calimax 2", " ", "Por cada 300 pesos al cliente se le "'\n'"entrega un boleto "'\n'"para participar. El carrito "'\n'"loco es la promoción más esperada "'\n'"por muchos bajacalifornianos, donde"'\n'" en dos minutos puedes llevarte productos"),
+        Review("assets/img/calimax81.jpg", "Noticia Calimax 3", " ", "Inaugura Calimax tienda Aprecio Natura"'\n'""),
+        Review("assets/img/calimax33.jpg", "Noticias Calimax 4", " ", "Descuentos y promociones especiales"'\n'""),
 
       ],
     );

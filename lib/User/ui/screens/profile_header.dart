@@ -1,37 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:app_calimax_convencion/User/bloc/bloc_user.dart';
+import 'package:app_calimax_convencion/User/model/user.dart';
 import 'package:app_calimax_convencion/User/ui/widgets/user_info.dart';
 import 'package:app_calimax_convencion/User/ui/widgets/button_bar.dart';
-import 'package:app_calimax_convencion/User/model/user.dart';
 
 class ProfileHeader extends StatelessWidget {
-  UserBloc userBloc;
   User user;
+
+  ProfileHeader(@required this.user);
 
   @override
   Widget build(BuildContext context) {
-    userBloc = BlocProvider.of<UserBloc>(context);
 
-    return StreamBuilder(
-      stream: userBloc.streamFirebase,
-      builder: (BuildContext context, AsyncSnapshot snapshot){
-        switch(snapshot.connectionState){
-          case ConnectionState.waiting:
-            return CircularProgressIndicator();
-          case ConnectionState.none:
-            return CircularProgressIndicator();
-          case ConnectionState.active:
-            return showProfileData(snapshot);
-          case ConnectionState.done:
-            return showProfileData(snapshot);
-        }
-
-      },
-    );
-
-
-    /*final title = Text(
+    final title = Text(
       'Profile',
       style: TextStyle(
           fontFamily: 'Lato',
@@ -40,6 +22,7 @@ class ProfileHeader extends StatelessWidget {
           fontSize: 30.0
       ),
     );
+
     return Container(
       margin: EdgeInsets.only(
           left: 20.0,
@@ -53,11 +36,11 @@ class ProfileHeader extends StatelessWidget {
               title
             ],
           ),
-          UserInfo('assets/img/ann.jpg', 'Anahí Salgado','anahi@platzi.com'),
+          UserInfo(user),
           ButtonsBar()
         ],
       ),
-    );*/
+    );
   }
 
 
@@ -80,7 +63,7 @@ class ProfileHeader extends StatelessWidget {
     }else{
       print("Logeado");
       print(snapshot.data);
-      user = User(name: snapshot.data.displayName, email: snapshot.data.email, photoURL: snapshot.data.photoUrl);
+      user = User(uid: snapshot.data.uid,name: snapshot.data.displayName, email: snapshot.data.email, photoURL: snapshot.data.photoUrl);
       final title = Text(
         'Profile',
         style: TextStyle(
